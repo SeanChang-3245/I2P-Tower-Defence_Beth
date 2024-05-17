@@ -12,15 +12,17 @@ public:
 	explicit ScoreBoardScene() = default;
 	void Initialize() override;
 	void Terminate() override;
-    void PrevOnClick();
-    void NextOnClick();
+    void PrevOnClick(int stage);
+    void NextOnClick(int stage);
     void BackOnClick(int stage);
     void ReadScore();
 
     std::vector<struct Player> player;
     int CurrentPage;
-    int TotolPage;
+    int TotalPage;
     int TotalPlayer;
+    std::vector<Engine::Label*> row_name;
+    std::vector<Engine::Label*> row_score;
 };
 
 struct Player{
