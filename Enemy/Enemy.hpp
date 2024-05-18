@@ -17,6 +17,7 @@ protected:
 	float speed;
 	float hp;
 	int money;
+	float FreezeTime;
 	PlayScene* getPlayScene();
 	virtual void OnExplode();
 public:
@@ -28,5 +29,6 @@ public:
 	void UpdatePath(const std::vector<std::vector<int>>& mapDistance);
 	void Update(float deltaTime) override;
 	void Draw() const override;
+	void Freeze(float t_length);
 };
 #endif // ENEMY_HPP

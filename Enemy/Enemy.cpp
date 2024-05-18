@@ -123,3 +123,15 @@ void Enemy::Draw() const {
 		al_draw_circle(Position.x, Position.y, CollisionRadius, al_map_rgb(255, 0, 0), 2);
 	}
 }
+
+void Enemy::Freeze(float t_length) {
+	// If already frozen, reset the timer.
+	if (FreezeTime > 0)
+		FreezeTime = t_length;
+	else {
+		// If not, freeze it.
+		FreezeTime = t_length;
+		// Slow down the speed.
+		speed /= 2;
+	}
+}
