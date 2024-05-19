@@ -255,6 +255,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
 }
 void PlayScene::OnKeyDown(int keyCode) {
 	IScene::OnKeyDown(keyCode);
+	
 	if (keyCode == ALLEGRO_KEY_TAB) {
 		DebugMode = !DebugMode;
 	}
