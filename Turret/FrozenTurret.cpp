@@ -11,7 +11,7 @@
 
 const int FrozenTurret::Price = 50 ;
 FrozenTurret::FrozenTurret(float x, float y) :
-    Turret("play/tower-base.png", "play/turret-4.png", x, y, 400, Price, 0.5) {
+    Turret("play/tower-base.png", "play/turret-4.png", x, y, 400, Price, 3) {
 }
 
 void FrozenTurret::CreateBullet(){
@@ -20,5 +20,5 @@ void FrozenTurret::CreateBullet(){
     Engine::Point normalized = diff.Normalize();
     // Change bullet position to the front of the gun barrel.
     getPlayScene()->BulletGroup->AddNewObject(new IceBullet(Position + normalized * 36, diff, rotation, this));
-    AudioHelper::PlayAudio("laser.wav");
+    AudioHelper::PlayAudio("ice.wav");
 }
