@@ -72,6 +72,7 @@ public:
 	void OnKeyDown(int keyCode) override;
 	void Hit();
 	int GetMoney() const;
+	int GetLives() const;
 	void EarnMoney(int money);
 	void ReadMap();
 	void ReadEnemyWave();

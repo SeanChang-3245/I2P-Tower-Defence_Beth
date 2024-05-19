@@ -308,6 +308,9 @@ void PlayScene::Hit() {
 int PlayScene::GetMoney() const {
 	return money;
 }
+int PlayScene::GetLives() const {
+	return lives;
+}
 void PlayScene::EarnMoney(int money) {
 	this->money += money;
 	UIMoney->Text = std::string("$") + std::to_string(this->money);
