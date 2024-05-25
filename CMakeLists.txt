@@ -90,6 +90,8 @@ add_executable(2024_I2P2_TowerDefense_with_answer
         Bullet/IceBullet.hpp
         Turret/FrozenTurret.cpp
         Turret/FrozenTurret.hpp
+		Enemy/ForthEnemy.cpp
+		Enemy/ForthEnemy.hpp
 
         # TODO: [HACKATHON-1-SCENE] (2/4) Add the new scene source files here
         Scene/StartScene.cpp
